@@ -37,7 +37,10 @@ ${answers.license}
 
 ## Questions
 
-Username: ${answers.username}<br />
-email: ${answers.email}`;
+My github Username is: ${answers.username}<br />
+contact me at email: ${answers.email}
+<br />
+For additional questions reach me at github: {(https://github.com/${answers.username})}`;
 }
+
 module.exports = generateReadme;
