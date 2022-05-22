@@ -2,6 +2,8 @@
 function generateReadme(answers) {
   return `
   <h1 align="center">${answers.title}</h1>
+
+  ![badge](https://img.shields.io/badge/license-${answers.license}-brightgreen)<br />
     
 
 ## Table of contents
@@ -9,7 +11,8 @@ function generateReadme(answers) {
 - [Usage](#usage)
 - [Contribution](#contribution)
 - [Installation](#installation)
-- [Links](#links)
+- [Tests](#Tests)
+- [Questions](#Questions)
 - [License](#license)
     
     
@@ -25,11 +28,14 @@ ${answers.contribution}
 ## Installation
 ${answers.installation}
 
+## Tests
+${answers.tests}
+
 ## License
 ${answers.license}
 
 
-## Links
+## Questions
 
 Username: ${answers.username}<br />
 email: ${answers.email}`;
