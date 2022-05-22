@@ -34,7 +34,16 @@ const promptUser = () => {
     name: "installation",
     message: "Please enter installation info of your project:",
   },
-
+  {
+    type: "input",
+    name: "tests",
+    message: "What are the tests implemented?",
+  },
+  {
+    type: "input",
+    name: "questions",
+    message: "In case an issue occurs?",
+  },
   {
     type: "input",
     name: "username",
