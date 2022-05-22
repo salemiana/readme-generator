@@ -1,38 +1,37 @@
 
 function generateReadme(answers) {
   return `
-
-    # ${answers.title}
-
+  <h1 align="center">${answers.title}</h1>
     
 
-    ## Table of contents
-    - [Description](#Description)
-    - [Usage](#usage)
-    - [Contribution](#contribution)
-    - [Installation](#installation)
-    - [Links](#links)
-    - [License](#license)
+## Table of contents
+- [Description](#Description)
+- [Usage](#usage)
+- [Contribution](#contribution)
+- [Installation](#installation)
+- [Links](#links)
+- [License](#license)
     
     
-    ## Description
-    ${answers.description}
+## Description
+${answers.description}
 
-    ## Usage
-    ${answers.usage}
- 
-    ##Contribution
-    ${answers.contribution}
+## Usage
+${answers.usage}
 
-    ##Installation
-    ${answers.installation}
+## Contribution
+${answers.contribution}
 
-    ## License
-    ${answers.license}
+## Installation
+${answers.installation}
+
+## License
+${answers.license}
 
 
-    ## Links
-    * github ${answers.deployed}
-    * repo ${answers.repo}`;
+## Links
+
+Username: ${answers.username}<br />
+email: ${answers.email}`;
 }
 module.exports = generateReadme;

@@ -2,6 +2,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateReadme = require('./template.js');
+// const genMarkdown = require('utils/generateMarkdown.js');
 const util = require('node:util');
 const writeFileSync = util.promisify(fs.writeFile);
 // TODO: Create an array of questions for user input
@@ -25,7 +26,7 @@ const promptUser = () => {
   {
     type: "input",
     name: "contribution",
-    message: "What is the contribution?",
+    message: "Who are the contributors?",
   
   },
   {
@@ -36,13 +37,13 @@ const promptUser = () => {
 
   {
     type: "input",
-    name: "userName",
+    name: "username",
     message: "What is your GitHub username?",
   },
   {
     type: "input",
-    name: "github",
-    message: "What is your repo link?",
+    name: "email",
+    message: "What is your email?",
   },
  
   {
@@ -63,9 +64,8 @@ const promptUser = () => {
 ]);
 };
 
-// TODO: Create a function to write README file
+// A function to write README file (and) to initialize app
 
-// TODO: Create a function to initialize app
 async function init() {
   try { const answers = await promptUser();
   const genReadme = generateReadme(answers);
