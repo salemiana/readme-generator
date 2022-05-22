@@ -7,12 +7,12 @@ function generateReadme(answers) {
     
 
 ## Table of contents
-- [Description](#Description)
+- [Description](#description)
 - [Usage](#usage)
 - [Contribution](#contribution)
 - [Installation](#installation)
-- [Tests](#Tests)
-- [Questions](#Questions)
+- [Tests](#tests)
+- [Questions](#questions)
 - [License](#license)
     
     
@@ -36,11 +36,11 @@ ${answers.license}
 
 
 ## Questions
-
-My github Username is: ${answers.username}<br />
-contact me at email: ${answers.email}
+${answers.questions}<br />
+My github Username:  ${answers.username}<br />
+My email:  ${answers.email}
 <br />
-For additional questions reach me at github: {(https://github.com/${answers.username})}`;
+For additional questions - github: {(https://github.com/${answers.username})}`;
 }
 
 module.exports = generateReadme;
