@@ -1,27 +1,38 @@
 
 function generateReadme(answers) {
-    return `
+  return `
 
-    <h1>Template Title<h1>
-    ## ${answers.title}
+    # ${answers.title}
+
+    
 
     ## Table of contents
-    * [Description](#description)
+    - [Description](#Description)
+    - [Usage](#usage)
+    - [Contribution](#contribution)
+    - [Installation](#installation)
+    - [Links](#links)
+    - [License](#license)
+    
+    
+    ## Description
     ${answers.description}
-    * [Usage](#usage)
-    ${answers.usage}
-    * * [Contribution](#contribution)
-    ${answers.contribution}
-    * [Installation](#installation)
-    ${answers.installation}
-    * [Questions](#questions)
-    * [License](#license)
-    ${answers.license}
-    
-    
 
-    ## Questions
+    ## Usage
+    ${answers.usage}
+ 
+    ##Contribution
+    ${answers.contribution}
+
+    ##Installation
+    ${answers.installation}
+
+    ## License
+    ${answers.license}
+
+
+    ## Links
     * github ${answers.deployed}
-    * repo ${answers.repo}`
+    * repo ${answers.repo}`;
 }
 module.exports = generateReadme;

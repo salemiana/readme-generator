@@ -50,9 +50,9 @@ const promptUser = () => {
     name: "license",
     message: "Please select the license you used for this project.",
     choices: [
-      "GNU AGPLv3",
+      "Perl",
       "GNU GPLv3",
-      "GNU LGPLv3",
+      "Eclipse",
       "Mozilla",
       "MIT",
       "Apache",
@@ -63,12 +63,7 @@ const promptUser = () => {
 ]);
 };
 
-// module.exports = {
-//   questions: questions,
-// };
-
 // TODO: Create a function to write README file
-
 
 // TODO: Create a function to initialize app
 async function init() {
