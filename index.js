@@ -1,11 +1,14 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const utils = require('utils');
+const generateReadme = require('./template.js');
+// const genMarkdown = require('utils/generateMarkdown.js');
+const util = require('node:util');
+const writeFileSync = util.promisify(fs.writeFile);
 // TODO: Create an array of questions for user input
 const promptUser = () => {
   return inquirer.prompt([
-    {
+  {
     type: "input",
     name: "title",
     message: "What is the title of your project?",
@@ -18,39 +21,28 @@ const promptUser = () => {
   {
     type: "input",
     name: "usage",
-    message: "Please enter a one-sentence description of your project:"
+    message: "Please enter usage of your project:"
+  },
+  {
+    type: "input",
+    name: "contribution",
+    message: "Who are the contributors?",
+  
   },
   {
     type: "input",
     name: "installation",
     message: "Please enter installation info of your project:",
   },
+
   {
     type: "input",
-    name: "contribution",
-    message: "What is the contribution?",
-  
-  },
-  {
-    type: "input",
-    name: "repo",
-    message: "What is the URL of the github repo?",
-  },
-  
-  {
-    type: "input",
-    name: "userName",
+    name: "username",
     message: "What is your GitHub username?",
   },
   {
     type: "input",
-    name: "github",
-    message: "What is your repo link?",
-  },
-
-  {
-    type: "input",
-    name: "userEmail",
+    name: "email",
     message: "What is your email?",
   },
  
@@ -59,9 +51,9 @@ const promptUser = () => {
     name: "license",
     message: "Please select the license you used for this project.",
     choices: [
-      "GNU AGPLv3",
+      "Perl",
       "GNU GPLv3",
-      "GNU LGPLv3",
+      "Eclipse",
       "Mozilla",
       "MIT",
       "Apache",
@@ -72,14 +64,8 @@ const promptUser = () => {
 ]);
 };
 
-module.exports = {
-  questions: questions,
-};
+// A function to write README file (and) to initialize app
 
-// TODO: Create a function to write README file
-
-
-// TODO: Create a function to initialize app
 async function init() {
   try { const answers = await promptUser();
   const genReadme = generateReadme(answers);
@@ -95,5 +81,4 @@ async function init() {
 init();
 
 
-// Function call to initialize app
-init();
+
