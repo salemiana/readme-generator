@@ -2,14 +2,17 @@
 function generateReadme(answers) {
   return `
   <h1 align="center">${answers.title}</h1>
+
+  ![badge](https://img.shields.io/badge/license-${answers.license}-brightgreen)<br />
     
 
 ## Table of contents
-- [Description](#Description)
+- [Description](#description)
 - [Usage](#usage)
 - [Contribution](#contribution)
 - [Installation](#installation)
-- [Links](#links)
+- [Tests](#tests)
+- [Questions](#questions)
 - [License](#license)
     
     
@@ -25,13 +28,19 @@ ${answers.contribution}
 ## Installation
 ${answers.installation}
 
+## Tests
+${answers.tests}
+
 ## License
 ${answers.license}
 
 
-## Links
-
-Username: ${answers.username}<br />
-email: ${answers.email}`;
+## Questions
+${answers.questions}<br />
+My github Username:  ${answers.username}<br />
+My email:  ${answers.email}
+<br />
+For additional questions - github: {(https://github.com/${answers.username})}`;
 }
+
 module.exports = generateReadme;
