@@ -23,3 +23,6 @@ SO THAT can quickly create a professional README for a new project
 * THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
 * WHEN I click on the links in the Table of Contents
 * THEN I am taken to the corresponding section of the README
+
+https://user-images.githubusercontent.com/101297588/169729650-c57d0acb-4f2c-40d7-9f75-265c8df97c2f.mp4
+
